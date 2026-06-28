@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Single Booking
+url: http://localhost:5000/api/bookings/6a4112863010e82656eca66c
+method: GET
+order: 2989875593506568

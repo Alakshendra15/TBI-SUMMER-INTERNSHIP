@@ -1,0 +1,171 @@
+{
+  "info": {
+    "name": "StaySense AI Backend APIs",
+    "_postman_id": "b7b8d5b1-demo",
+    "description": "API collection for StaySense AI Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Bookings",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/bookings",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "bookings"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Single Booking",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/bookings/:id",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "bookings",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"guestName\": \"Rahul Sharma\",\n  \"email\": \"rahul@gmail.com\",\n  \"phone\": \"9876543210\",\n  \"roomType\": \"Deluxe\",\n  \"checkIn\": \"2026-07-15\",\n  \"checkOut\": \"2026-07-18\",\n  \"guests\": 2,\n  \"specialRequest\": \"Mountain View Room\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/bookings",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "bookings"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Booking",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"Confirmed\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/bookings/:id",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "bookings",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Booking Status",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"Confirmed\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/bookings/:id/status",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "bookings",
+            ":id",
+            "status"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Booking",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:5000/api/bookings/:id",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "bookings",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Bookings",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/bookings/search?guestName=Rahul",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "bookings",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "guestName",
+              "value": "Rahul"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+$kind: http-request
+name: Update Booking
+url: http://localhost:5000/api/bookings/6a4112863010e82656eca66c/status
+method: PATCH
+body:
+  type: json
+  content: "{\r\n  \"status\": \"Confirmed\"\r\n}"
+order: 4023099815409593

@@ -1,0 +1,7 @@
+$kind: http-request
+name: search booking
+url: http://localhost:5000/api/bookings/search?guestName=Rahul
+method: GET
+queryParams:
+  guestName: Rahul
+order: 4248022740152245

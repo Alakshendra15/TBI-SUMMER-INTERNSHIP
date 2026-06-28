@@ -1,0 +1,7 @@
+$kind: http-request
+name: Delete Booking
+url: http://localhost:5000/api/bookings/search?guestName=Rahul
+method: GET
+queryParams:
+  guestName: Rahul
+order: 4240472552985485
